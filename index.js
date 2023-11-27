@@ -35,9 +35,11 @@ inquirer
         })
     })
 
-const generateSvg = ({ text, textColor, shape, shapeColor}) =>
+const generateSvg = ({ text, textColor, shape, shapeColor}) => {
+    
+}
 
-``
+
 
 
 
