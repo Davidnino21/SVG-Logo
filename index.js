@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { default: generate } = require('@babel/generator');
+const Svg = require('./lib/svg');
 
 inquirer
     .prompt([
@@ -36,7 +36,10 @@ inquirer
     })
 
 const generateSvg = ({ text, textColor, shape, shapeColor}) => {
-    
+    const svg = new Svg()
+    svg.setTextElement(text, textColor)
+    svg.setShapeElement(shape, shapeColor)
+    return svg.render()
 }
 
 
